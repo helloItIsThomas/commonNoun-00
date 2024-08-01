@@ -8,12 +8,12 @@ class Person {
 const colors = [
   "#FF6C2F",
   "#FFE800",
-  "#235BA8",
+  // "#235BA8",
   "#62C2B1",
   "#FF665E",
   "#F984CA",
   "#68724D",
-  "#BD6439",
+  // "#BD6439",
 ];
 
 const people = [
@@ -28,6 +28,9 @@ const people = [
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
+  const body = document.querySelector("body");
+  const randomColor = colors[Math.floor(Math.random() * colors.length)];
+  body.style.backgroundColor = randomColor;
   // const stackDiv = document.querySelector(".stack");
   const stackDiv = document.querySelector("#right");
   stackDiv.innerHTML = ""; // Clear any existing content
@@ -41,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     cardDiv.style.zIndex = people.length - index;
     cardDiv.textContent = person.name;
     cardDiv.addEventListener("click", () => {
-      window.location.href = person.url; // Navigate to the person's link on click
+      window.open(person.url, "_blank");
     });
     stackDiv.appendChild(cardDiv);
   });

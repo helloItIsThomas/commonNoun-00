@@ -25,6 +25,8 @@ const people = [
   new Person("micah", "https://micahrowgo.com/"),
   new Person("nibby", "https://nickfrench.design/"),
   new Person("emmuh", "http://emmagreschak.com/"),
+  new Person("madi", "https://madiritenburgh.co/"),
+  new Person("gabby", "https://gabriellemack.format.com"),
 ];
 
 document.addEventListener("DOMContentLoaded", () => {

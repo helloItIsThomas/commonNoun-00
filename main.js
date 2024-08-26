@@ -29,10 +29,15 @@ const people = [
   new Person("gabby", "https://gabriellemack.format.com"),
 ];
 
-document.addEventListener("DOMContentLoaded", () => {
+function colorChange() {
   const body = document.querySelector("body");
   const randomColor = colors[Math.floor(Math.random() * colors.length)];
   body.style.backgroundColor = randomColor;
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  colorChange();
+  return;
   // const stackDiv = document.querySelector(".stack");
   const stackDiv = document.querySelector("#right");
   stackDiv.innerHTML = ""; // Clear any existing content
